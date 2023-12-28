@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 export const app = initializeApp({
-  apiKey: "AIzaSyD3xPI4TkU7SkIg0w1iuTZ5Dnk9rj6GC5k",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "julia-firestack-bugbash.firebaseapp.com",
   projectId: "julia-firestack-bugbash",
   storageBucket: "julia-firestack-bugbash.appspot.com",
