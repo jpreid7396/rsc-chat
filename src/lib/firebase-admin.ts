@@ -2,7 +2,7 @@ import { initializeApp as initializeAdmin, cert, getApps, getApp } from 'firebas
 import { getFirestore as getAdminFirestore } from 'firebase-admin/firestore';
 
 export const app = getApps().length ? getApp() : initializeAdmin({
-    credential: admin.credential.cert({
+    credential: cert({
         client_email: process.env.FIREBASE_CLIENT_EMAIL,
         private_key: process.env.FIREBASE_PRIVATE_KEY,
         project_id: 'julia-firestack-bugbash'
